@@ -8,6 +8,7 @@ import CounterUsingReducerDemo01 from "./useReducerExample01";
 import MyInput from "./Example01SetTextField";
 import ChangeColor1 from "./ChangeTextColor";
 import TestComponent from "./textComponent";
+import DisplaySelectedImage from "./DisplaySelectedImage";
 function Header({ name, year }) {
   //  console.log(props);
   return (
@@ -68,6 +69,9 @@ function App() {
       </div>
       <div>
         <TestComponent></TestComponent>
+      </div>
+      <div>
+      <DisplaySelectedImage></DisplaySelectedImage>
       </div>
     </div>
 
