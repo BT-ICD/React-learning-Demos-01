@@ -9,6 +9,7 @@ import MyInput from "./Example01SetTextField";
 import ChangeColor1 from "./ChangeTextColor";
 import TestComponent from "./textComponent";
 import DisplaySelectedImage from "./DisplaySelectedImage";
+import CheckBoxDemo01 from "./checkboxdemo01";
 function Header({ name, year }) {
   //  console.log(props);
   return (
@@ -72,6 +73,9 @@ function App() {
       </div>
       <div>
       <DisplaySelectedImage></DisplaySelectedImage>
+      </div>
+      <div>
+        <CheckBoxDemo01></CheckBoxDemo01>
       </div>
     </div>
 

@@ -1,3 +1,7 @@
+/// To create a component that display list of images in a dropdown 
+/// Display Selected Image
+///
+
 const imageList = [
     {'name':'Steve Jobs - 01', 'imgName':'S01.jpeg'},
     {'name':'Steve Jobs - 02', 'imgName':'S02.jpeg'},
