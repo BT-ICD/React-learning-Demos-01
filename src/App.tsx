@@ -10,6 +10,8 @@ import ChangeColor1 from "./ChangeTextColor";
 import TestComponent from "./textComponent";
 import DisplaySelectedImage from "./DisplaySelectedImage";
 import CheckBoxDemo01 from "./checkboxdemo01";
+import ApiAccessDemo01 from "./apiaccess";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function Header({ name, year }) {
   //  console.log(props);
   return (
@@ -38,46 +40,58 @@ function App() {
     setStatusBool(setStatusBool => !setStatusBool);
   }
   return (
-    <div>
-      {/* <Message/> */}
-      <h2>The restaurant is currently {status}</h2>
-      <h2>The restaurant is {statusBool ? "Open" : "Closed"}</h2>
-      <button onClick={() => setStatus("Closed")}>Close Restaurant</button>
-      <button onClick={() => setStatus("Open")} >Open Restaurant</button>
-      <button onClick={handleStatusButtonClick}>{statusBool ? "Close" : "Open"} this restaurant</button>
-      <img src={s01} height={200} alt="Steve Jobs Photo" />
-      <Header name="Manan" year={2002} />
-      <DisplayItems dishes={disObjects} />
-      <div>
-        <p>Counter Component </p>
-        <Counter />
-      </div>
-      <div>
-        <ChildCompopent openStatus={statusBool} onStatus={setStatusBool} />
-      </div>
-      <p>
-        Example of counter using useReducer demo - 01
-      </p>
-      <div>
-        <CounterUsingReducerDemo01 />
-      </div>
-      <div>
-        <MyInput></MyInput>
-      </div>
-      <div>
-        <p>Change Color - 01</p>
-        <ChangeColor1></ChangeColor1>
-      </div>
-      <div>
-        <TestComponent></TestComponent>
-      </div>
-      <div>
-      <DisplaySelectedImage></DisplaySelectedImage>
-      </div>
-      <div>
-        <CheckBoxDemo01></CheckBoxDemo01>
-      </div>
-    </div>
+    // <div>
+    //   {/* <Message/> */}
+    //   <h2>The restaurant is currently {status}</h2>
+    //   <h2>The restaurant is {statusBool ? "Open" : "Closed"}</h2>
+    //   <button onClick={() => setStatus("Closed")}>Close Restaurant</button>
+    //   <button onClick={() => setStatus("Open")} >Open Restaurant</button>
+    //   <button onClick={handleStatusButtonClick}>{statusBool ? "Close" : "Open"} this restaurant</button>
+    //   <img src={s01} height={200} alt="Steve Jobs Photo" />
+    //   <Header name="Manan" year={2002} />
+    //   <DisplayItems dishes={disObjects} />
+    //   <div>
+    //     <p>Counter Component </p>
+    //     <Counter />
+    //   </div>
+    //   <div>
+    //     <ChildCompopent openStatus={statusBool} onStatus={setStatusBool} />
+    //   </div>
+    //   <p>
+    //     Example of counter using useReducer demo - 01
+    //   </p>
+    //   <div>
+    //     <CounterUsingReducerDemo01 />
+    //   </div>
+    //   <div>
+    //     <MyInput></MyInput>
+    //   </div>
+    //   <div>
+    //     <p>Change Color - 01</p>
+    //     <ChangeColor1></ChangeColor1>
+    //   </div>
+    //   <div>
+    //     <TestComponent></TestComponent>
+    //   </div>
+    //   <div>
+    //   <DisplaySelectedImage></DisplaySelectedImage>
+    //   </div>
+    //   <div>
+    //     <CheckBoxDemo01></CheckBoxDemo01>
+    //   </div>
+    //   <div>API Demo
+
+    //     <ApiAccessDemo01></ApiAccessDemo01>
+    //   </div>
+    // </div>
+      <Router>
+      <Routes>
+        <Route path="/" element={<TestComponent />} />
+        <Route path="/myinput-demo" element={<MyInput />} />
+        <Route path="/checkbox-demo01" element={<CheckBoxDemo01 />} />
+        <Route path="/api-access-demo" element={<ApiAccessDemo01 />} />
+      </Routes>
+    </Router>
 
   );
 }
